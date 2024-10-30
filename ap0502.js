@@ -50,7 +50,7 @@ function init() {
   // 正20面体の作成
   const geometry = new THREE.IcosahedronGeometry();
   const material = new THREE.MeshLambertMaterial();
-  material.map = moonTexture;
+  material.map = testTexture;
   // UVマッピング
   // 立体の表面の三角形とテクスチャ画像の対応を決める
   //   基準となる数値
@@ -135,9 +135,9 @@ function init() {
     axes.visible = controls.axes;
     // テクスチャの切り替え
     if(controls.test){
-      material.map = moonTexture;
+      material.map = testTexture;
    }else{
-    material.map = testTexture;
+    material.map = moonTexture;
    }
     // 物体の回転
     if (controls.rotate) {
